@@ -4,9 +4,10 @@ body {
     margin: 0;
 
     overflow: hidden;
+    
 }
 
-.cube {
+.container {
     display: flex;
     min-height: 100vh;
 
@@ -14,8 +15,6 @@ body {
     justify-content: center;
 
     padding-top: 80px;
-    transform-style: preserve-3d;
-    animation: ani 8s linear infinite;
 } 
 
 h1,
@@ -90,6 +89,100 @@ h3 {
         transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
     }
 }
+
+/* HEXAGON SHAPING AND ANIMATION */
+
+.hexagon-out {
+    width: 300px;
+    height: 173.205px;
+    background: #a3a39e;
+    position: absolute;
+    margin: 0 0 150px 20px;
+    opacity: 0;
+    animation: scaleOut 1s cubic-bezier(.36, .11, .89, .32);
+}
+
+.hexagon-out::before {
+    content: "";
+    position: absolute;
+    top: -86.6025px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 86.6025px solid #a3a39e;
+}
+
+.hexagon-out::after {
+    content: "";
+    position: absolute;
+    bottom: -86.6025px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 86.6025px solid #a3a39e;
+}
+
+@keyframes scaleOut {
+    from {
+      transform: scale(.05, .05);
+      opacity: .3;
+    }
+    to {
+      transform: scale(2.5, 2.5);
+      opacity: 0;
+    }
+}
+
+.hexagon-in {
+    width: 300px;
+    height: 173.205px;
+    background: #a3a39e;
+    position: absolute;
+    margin: 0 0 150px 20px;
+    opacity: 0;
+    animation: scaleIn 1s cubic-bezier(.36, .11, .89, .32);
+}
+
+.hexagon-in::before {
+    content: "";
+    position: absolute;
+    top: -86.6025px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 86.6025px solid #a3a39e;
+}
+
+.hexagon-in::after {
+    content: "";
+    position: absolute;
+    bottom: -86.6025px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 86.6025px solid #a3a39e;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(2.4, 2.4);
+        opacity: .1;
+    }
+    to {
+        transform: scale(.05, .05);
+        opacity: .5;
+    }
+}
+
+/* START OF CUBE SHAPING AND PLACEMENT */
 
 .face {
     transform-origin: 0 0;
