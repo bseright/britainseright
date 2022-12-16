@@ -9,11 +9,14 @@ body {
 .cube {
     display: flex;
     min-height: 100vh;
+
     align-items: center;
     justify-content: center;
 
     padding-top: 80px;
-}
+    transform-style: preserve-3d;
+    animation: ani 8s linear infinite;
+} 
 
 h1,
 h2, 
@@ -24,6 +27,68 @@ h3 {
     letter-spacing: 0.05em;
     padding: 0px;
     margin: 0px;
+}
+
+/* BREATHING ANIMATIONS */
+
+@keyframes down-right {
+    0% {
+        -ms-transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
+        -webkit-transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
+        transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
+    }
+    
+    50% {
+        -ms-transform: rotate(-30deg) skewX(-30deg) translate(140px, 182px) scaleY(0.864);
+        -webkit-transform: rotate(-30deg) skewX(-30deg) translate(140px, 182px) scaleY(0.864);
+        transform: rotate(-30deg) skewX(-30deg) translate(140px, 182px) scaleY(0.864);
+    } 
+
+    100% {
+        -ms-transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
+        -webkit-transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
+        transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
+    }
+}
+
+@keyframes down-left {
+    0% {
+        -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+        -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+        transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+    }
+    
+    50% {
+        -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(78px, -121px);
+        -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(78px, -121px);
+        transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(78px, -121px);
+    } 
+
+    100% {
+        -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(67px, -131px);
+        -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+        transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+    }
+}
+
+@keyframes just-up {
+    0% {
+        -ms-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+        -webkit-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+        transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+    }
+    
+    50% {
+        -ms-transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+        -webkit-transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+        transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+    } 
+
+    100% {
+        -ms-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+        -webkit-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+        transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+    }
 }
 
 .face {
@@ -49,6 +114,9 @@ h3 {
     transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
 
     left: 525px;
+
+    animation: down-right 10s infinite;
+    transition-timing-function: ease-in-out;
 }
 
 .left {
@@ -58,7 +126,11 @@ h3 {
     -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
     transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
 
-    left: 105px;
+    left: 107px;
+
+    animation: down-left 10s infinite;
+    transition-timing-function: ease-in-out;
+    animation-delay: .5s;
 }
 
 .top {
@@ -69,6 +141,10 @@ h3 {
     transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
 
     right: 315px;
+
+    animation: just-up 10s infinite;
+    transition-timing-function: ease-in-out;
+    animation-delay: 1s;
 }
 
 h1 {
