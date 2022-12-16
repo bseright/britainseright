@@ -99,7 +99,7 @@ h3 {
     position: absolute;
     margin: 0 0 150px 20px;
     opacity: 0;
-    animation: scaleOut 1s cubic-bezier(.36, .11, .89, .32);
+    animation: pushOut 3.5s cubic-bezier(.36, .11, .89, .32);
 }
 
 .hexagon-out::before {
@@ -126,7 +126,7 @@ h3 {
     border-top: 86.6025px solid #a3a39e;
 }
 
-@keyframes scaleOut {
+@keyframes pushOut {
     from {
       transform: scale(.05, .05);
       opacity: .3;
@@ -144,7 +144,7 @@ h3 {
     position: absolute;
     margin: 0 0 150px 20px;
     opacity: 0;
-    animation: scaleIn 1s cubic-bezier(.36, .11, .89, .32);
+    animation: pullIn 3.5s cubic-bezier(.36, .11, .89, .32);
 }
 
 .hexagon-in::before {
@@ -171,14 +171,14 @@ h3 {
     border-top: 86.6025px solid #a3a39e;
 }
 
-@keyframes scaleIn {
+@keyframes pullIn {
     from {
         transform: scale(2.4, 2.4);
         opacity: .1;
     }
     to {
         transform: scale(.05, .05);
-        opacity: .5;
+        opacity: .35;
     }
 }
 
