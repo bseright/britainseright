@@ -13,7 +13,6 @@ body {
 
     align-items: center;
     justify-content: center;
-
     padding-top: 80px;
 } 
 
@@ -92,17 +91,18 @@ h3 {
 
 /* HEXAGON SHAPING AND ANIMATION */
 
-.hexagon-out {
+.hexagon {
     width: 300px;
     height: 173.205px;
-    background: #a3a39e;
+    background: #41b0d2;
     position: absolute;
     margin: 0 0 150px 20px;
     opacity: 0;
-    animation: pushOut 3.5s cubic-bezier(.36, .11, .89, .32);
+    animation: pushOut 9s cubic-bezier(.36, .11, .89, .32);
+    animation-timing-function: ease-in-out;
 }
 
-.hexagon-out::before {
+.hexagon::before {
     content: "";
     position: absolute;
     top: -86.6025px;
@@ -111,10 +111,10 @@ h3 {
     height: 0;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-bottom: 86.6025px solid #a3a39e;
+    border-bottom: 86.6025px solid #41b0d2;
 }
 
-.hexagon-out::after {
+.hexagon::after {
     content: "";
     position: absolute;
     bottom: -86.6025px;
@@ -123,64 +123,28 @@ h3 {
     height: 0;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-top: 86.6025px solid #a3a39e;
+    border-top: 86.6025px solid #41b0d2;
 }
 
 @keyframes pushOut {
-    from {
-      transform: scale(.05, .05);
-      opacity: .3;
-    }
-    to {
-      transform: scale(2.5, 2.5);
-      opacity: 0;
-    }
-}
-
-.hexagon-in {
-    width: 300px;
-    height: 173.205px;
-    background: #a3a39e;
-    position: absolute;
-    margin: 0 0 150px 20px;
-    opacity: 0;
-    animation: pullIn 3.5s cubic-bezier(.36, .11, .89, .32);
-}
-
-.hexagon-in::before {
-    content: "";
-    position: absolute;
-    top: -86.6025px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 86.6025px solid #a3a39e;
-}
-
-.hexagon-in::after {
-    content: "";
-    position: absolute;
-    bottom: -86.6025px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-top: 86.6025px solid #a3a39e;
-}
-
-@keyframes pullIn {
-    from {
-        transform: scale(2.4, 2.4);
-        opacity: .1;
-    }
-    to {
+    0% {
         transform: scale(.05, .05);
-        opacity: .35;
+        opacity: .5;
+    }
+    45% {
+        transform: scale(2, 2);
+        opacity: .2;
+    }
+    60% {
+        transform: scale(2, 2);
+        opacity: .2;
+    }
+    100% {
+        transform: scale(.05, .05);
+        opacity: .4;
     }
 }
+
 
 /* START OF CUBE SHAPING AND PLACEMENT */
 
