@@ -2,9 +2,6 @@ body {
     background-color: #FFFEF1;
     padding: 0;
     margin: 0;
-
-    overflow: hidden;
-    
 }
 
 .container {
@@ -94,11 +91,11 @@ h3 {
 .hexagon {
     width: 300px;
     height: 173.205px;
-    background: #41b0d2;
+    background: #000000;
     position: absolute;
     margin: 0 0 150px 20px;
     opacity: 0;
-    animation: pushOut 9s cubic-bezier(.36, .11, .89, .32);
+    animation: pushOut 10s infinite cubic-bezier(.36, .11, .89, .32);
     animation-timing-function: ease-in-out;
 }
 
@@ -111,7 +108,7 @@ h3 {
     height: 0;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-bottom: 86.6025px solid #41b0d2;
+    border-bottom: 86.6025px solid #000000;
 }
 
 .hexagon::after {
@@ -123,25 +120,29 @@ h3 {
     height: 0;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-top: 86.6025px solid #41b0d2;
+    border-top: 86.6025px solid #000000;
 }
 
 @keyframes pushOut {
     0% {
-        transform: scale(.05, .05);
-        opacity: .5;
+        transform: scale(0, 0);
+        opacity: .3;
     }
-    45% {
+    35% {
         transform: scale(2, 2);
-        opacity: .2;
+        opacity: .1;
     }
-    60% {
+    50% {
         transform: scale(2, 2);
-        opacity: .2;
+        opacity: .1;
+    }
+    90% {
+        transform: scale(0, 0);
+        opacity: .3;
     }
     100% {
-        transform: scale(.05, .05);
-        opacity: .4;
+        transform: scale(0, 0);
+        opacity: .3;
     }
 }
 
@@ -183,7 +184,7 @@ h3 {
     -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
     transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
 
-    left: 107px;
+    left: 105px;
 
     animation: down-left 10s infinite;
     transition-timing-function: ease-in-out;
@@ -198,6 +199,7 @@ h3 {
     transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
 
     right: 315px;
+    bottom: 1px;
 
     animation: just-up 10s infinite;
     transition-timing-function: ease-in-out;
