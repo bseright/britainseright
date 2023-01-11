@@ -18,4 +18,5 @@ function hardRefresh() {
   }
 
   window.addEventListener("DOMContentLoaded", hardRefresh);
+  window.addEventListener("visibilitychange", hardRefresh);
   window.addEventListener("deviceorientation", hardRefresh, true);
