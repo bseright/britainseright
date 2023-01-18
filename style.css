@@ -10,7 +10,6 @@ body {
 
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
 } 
 
 h1,
@@ -93,7 +92,7 @@ h3 {
     height: 173.205px;
     background: #000000;
     position: absolute;
-    margin: 0 0 150px 20px;
+    margin: 10px 0 0 16px;
     opacity: 0;
     animation: pushOut 10s infinite cubic-bezier(.36, .11, .89, .32);
     animation-timing-function: ease-in-out;
@@ -102,7 +101,7 @@ h3 {
 .hexagon::before {
     content: "";
     position: absolute;
-    top: -86.6025px;
+    top: -85.6025px;
     left: 0;
     width: 0;
     height: 0;
@@ -114,7 +113,7 @@ h3 {
 .hexagon::after {
     content: "";
     position: absolute;
-    bottom: -86.6025px;
+    bottom: -85.6025px;
     left: 0;
     width: 0;
     height: 0;
@@ -151,8 +150,8 @@ h3 {
 
 .face {
     transform-origin: 0 0;
-    width: 380px;
-    height: 380px;
+    min-width: 380px;
+    min-height: 380px;
     position: relative;
     padding: 20px;
 }
@@ -162,6 +161,8 @@ h3 {
     display: flex;  
     align-items: center;
     justify-content: center;
+
+    top: 80px;
 }
 
 .right {
@@ -172,6 +173,7 @@ h3 {
     transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
 
     left: 525px;
+    top: 80px;
 
     animation: down-right 10s infinite;
     transition-timing-function: ease-in-out;
