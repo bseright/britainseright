@@ -85,6 +85,8 @@ h3 {
     }
 }
 
+/* STOP BREATHING ANIMATIONS */
+
 @keyframes stopPulseRight {
     to {
         -ms-transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
@@ -109,6 +111,8 @@ h3 {
     }
 }
 
+/* HOVER ANIMATIONS */
+
 @keyframes hoverRight {
     from {
         -ms-transform: rotate(-30deg) skewX(-30deg) translate(130px, 172px) scaleY(0.864);
@@ -119,6 +123,30 @@ h3 {
         -webkit-transform: rotate(-30deg) skewX(-30deg) translate(140px, 182px) scaleY(0.864);
         transform: rotate(-30deg) skewX(-30deg) translate(140px, 182px) scaleY(0.864);
     }
+}
+
+@keyframes hoverLeft {
+    from {
+        -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+        -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+        transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(68px, -131px);
+    } to {
+        -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(78px, -121px);
+        -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(78px, -121px);
+        transform: rotate(90deg) skewX(-30deg) scaleY(0.864) translate(78px, -121px);
+    } 
+}
+
+@keyframes hoverTop {
+    from {
+        -ms-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+        -webkit-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+        transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+    } to {
+        -ms-transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+        -webkit-transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+        transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+    } 
 }
 
 /* HEXAGON SHAPING AND ANIMATION */
@@ -219,6 +247,12 @@ h3 {
     animation: 2s 1 ease-in-out stopPulseRight;
 }
 
+.stopPulseRight {
+    background-color: rgb(174, 174, 174, .65);
+    animation: 1s 1 ease-in-out stopPulseRight;
+    transition: .5s all;
+}
+
 .hoverRight {
     background-color: #3A577A;
     left: 516px;
@@ -244,10 +278,22 @@ h3 {
 }
 
 .stopPulseLeft {
-    background-color: rgb(174, 174, 174, .65);
+    background-color: rgb(174, 174, 174, .7);
     animation: 1s 1 ease-in-out stopPulseLeft;
     transition: .5s all;
 }
+
+.hoverLeft {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+
+    background-color: #355070;
+    top: 80px;
+    left: 94px;
+
+    animation: 1s 1 ease hoverLeft forwards;
+}   
 
 .top {
     background-color: #3F628A;
@@ -278,12 +324,39 @@ h1 {
     line-height: 50px;
 }
 
+.stopPulseRight h1 {
+    color: rgb(174, 174, 174, .65);
+    text-shadow: none;
+    font-size: 48px;
+    line-height: 50px;
+
+    text-shadow:
+    -1px -1px 0 #FFFEE5,  
+    1px -1px 0 #FFFEE5,
+    -1px 1px 0 #FFFEE5,
+    1px 1px 0 #FFFEE5;
+}
+
 h2 {
     color: #E4CA6D;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
     font-size: 36px;
     line-height: 40px;
     margin-top: 20px;
+}
+
+.stopPulseRight h2 {
+    color: rgb(174, 174, 174, .65);
+    text-shadow: none;
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 20px;
+
+    text-shadow:
+    -1px -1px 0 #FFFEE5,  
+    1px -1px 0 #FFFEE5,
+    -1px 1px 0 #FFFEE5,
+    1px 1px 0 #FFFEE5;
 }
 
 .left h3 {
@@ -293,6 +366,12 @@ h2 {
 
 .stopPulseLeft h3 {
     color: rgb(174, 174, 174, .65);
+    transition: .5s all;
+}
+
+.hoverLeft h3 {
+    color: #355070;
+    transform: rotate(-90deg);
 }
 
 .top h3 {
@@ -302,6 +381,7 @@ h2 {
 
 .stopPulseTop h3 {
     color: rgb(174, 174, 174, .6);
+    transition: .5s all;
 }
 
 h3 {
@@ -330,4 +410,20 @@ button {
     font-weight: 700;
     line-height: 22px;
     color: #FFFFFF;
+}
+
+.stopPulseRight button {
+    background: transparent;
+    border: 1px #FFFEE5 solid;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    box-shadow: none;
+    margin-top: 40px;
+    padding: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #FFFEE5;
 }

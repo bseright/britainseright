@@ -38,3 +38,30 @@ right.addEventListener('mouseout', function() {
     container.prepend(hexagon);
 })
 
+left.addEventListener('mouseover', function() {
+    
+    right.classList.remove("pulseRight");
+    left.classList.remove("left");
+    left.classList.remove("pulseLeft");
+    topFace.classList.remove("pulseTop");
+
+    right.classList.add("stopPulseRight");
+    left.classList.add("hoverLeft");
+    topFace.classList.add("stopPulseTop");
+
+    hexagon.remove();
+})
+
+left.addEventListener('mouseout', function() {
+    
+    right.classList.add("pulseRight");
+    left.classList.add("left");
+    left.classList.add("pulseLeft");
+    topFace.classList.add("pulseTop");
+
+    right.classList.remove("stopPulseRight");
+    left.classList.remove("hoverLeft");
+    topFace.classList.remove("stopPulseTop");
+
+    container.prepend(hexagon);
+})
