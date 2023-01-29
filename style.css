@@ -317,6 +317,18 @@ h3 {
     transition: .5s all;
 }
 
+.hoverTop {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+
+    background-color: #3F628A;
+    right: 325.5px;
+    top: 78px;
+
+    animation: 1s 1 ease hoverTop forwards;
+}   
+
 h1 {
     color: #FFFEE5;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
@@ -372,6 +384,11 @@ h2 {
 .hoverLeft h3 {
     color: #355070;
     transform: rotate(-90deg);
+}
+
+.hoverTop h3 {
+    color: #3F628A;
+    transform: rotate(-270deg);
 }
 
 .top h3 {
