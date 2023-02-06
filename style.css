@@ -143,9 +143,9 @@ h3 {
         -webkit-transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
         transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
     } to {
-        -ms-transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
-        -webkit-transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
-        transform: rotate(210deg) skew(-30deg) translate(-190px, -50px) scaleY(0.864);
+        -ms-transform: rotate(210deg) skew(-30deg) translate(-190px, -52px) scaleY(0.864);
+        -webkit-transform: rotate(210deg) skew(-30deg) translate(-190px, -52px) scaleY(0.864);
+        transform: rotate(210deg) skew(-30deg) translate(-190px, -52px) scaleY(0.864);
     } 
 }
 
@@ -253,6 +253,10 @@ h3 {
     transition: .5s all;
 }
 
+.stopPulseRight button {
+    outline: rgb(174, 174, 174, .65);
+}
+
 .hoverRight {
     background-color: #3A577A;
     left: 516px;
@@ -293,6 +297,7 @@ h3 {
     left: 94px;
 
     animation: 1s 1 ease hoverLeft forwards;
+    cursor: pointer;
 }   
 
 .top {
@@ -327,6 +332,7 @@ h3 {
     top: 78px;
 
     animation: 1s 1 ease hoverTop forwards;
+    cursor: pointer;
 }   
 
 h1 {
@@ -427,6 +433,16 @@ button {
     font-weight: 700;
     line-height: 22px;
     color: #FFFFFF;
+    transition: all linear .2s;
+
+    outline: 2px solid #3A577A;
+    outline-offset: 2px;
+}
+
+button:hover {
+    outline: 2px solid #FFFEE5;
+    outline-offset: 2px;
+    cursor: pointer;
 }
 
 .stopPulseRight button {

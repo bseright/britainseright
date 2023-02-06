@@ -27,6 +27,7 @@ right.addEventListener('mouseover', function() {
 right.addEventListener('mouseout', function() {
     
     right.classList.add("right");
+
     right.classList.add("pulseRight");
     left.classList.add("pulseLeft");
     topFace.classList.add("pulseTop");
@@ -60,8 +61,9 @@ left.addEventListener('mouseout', function() {
     topFace.classList.add("pulseTop");
 
     right.classList.remove("stopPulseRight");
-    left.classList.remove("hoverLeft");
     topFace.classList.remove("stopPulseTop");
+
+    left.classList.remove("hoverLeft");
 
     container.prepend(hexagon);
 })
