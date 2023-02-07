@@ -129,6 +129,16 @@ let aboutClick = function() {
     left.classList.remove("hoverLeft");
 }
 
+let portfolioClick = function() {
+    removeAllHover();
+    
+    topFace.classList.add("top");
+
+    right.classList.remove("stopPulseRight");
+    left.classList.remove("stopPulseLeft");
+    topFace.classList.remove("hoverTop");
+}
+
 
 // add hover event listeners 
 
@@ -138,3 +148,4 @@ addAllHover();
 // add click event listeners
 
 left.addEventListener('click', aboutClick);
+topFace.addEventListener('click', portfolioClick);
