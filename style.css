@@ -216,8 +216,11 @@ h3 {
     transform-origin: 0 0;
     min-width: 380px;
     min-height: 380px;
+    max-width: 380px;
+    max-height: 380px;
     position: relative;
     padding: 20px;
+    overflow: hidden;
 }
 
 .left,
@@ -274,6 +277,9 @@ h3 {
 
     top: 80px;
     left: 94px;
+
+    display: flex;
+    align-items: space-between;
 }
 
 .pulseLeft {
