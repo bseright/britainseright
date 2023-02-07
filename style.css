@@ -433,7 +433,7 @@ button {
     font-weight: 700;
     line-height: 22px;
     color: #FFFFFF;
-    transition: all linear .2s;
+    transition: all linear .1s;
 
     outline: 2px solid #3A577A;
     outline-offset: 2px;

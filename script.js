@@ -1,3 +1,5 @@
+// establish elements
+
 let faces = document.querySelectorAll(".face");
 let hexagon = document.querySelector(".hexagon");
 let container = document.querySelector(".container");
@@ -10,8 +12,10 @@ let pulseRight = document.querySelector(".pulseRight");
 let pulseLeft = document.querySelector(".pulseLeft");
 let pulseTop = document.querySelector(".pulseTop");
 
-right.addEventListener('mouseover', function() {
-    
+
+// start hover functions
+
+let rightMouseover = function() {
     right.classList.remove("right");
     right.classList.remove("pulseRight");
     left.classList.remove("pulseLeft");
@@ -22,10 +26,9 @@ right.addEventListener('mouseover', function() {
     topFace.classList.add("stopPulseTop");
 
     hexagon.remove();
-})
+}
 
-right.addEventListener('mouseout', function() {
-    
+let rightMouseout = function() {
     right.classList.add("right");
 
     right.classList.add("pulseRight");
@@ -37,10 +40,9 @@ right.addEventListener('mouseout', function() {
     topFace.classList.remove("stopPulseTop");
 
     container.prepend(hexagon);
-})
+}
 
-left.addEventListener('mouseover', function() {
-    
+let leftMouseover = function() { 
     right.classList.remove("pulseRight");
     left.classList.remove("left");
     left.classList.remove("pulseLeft");
@@ -51,10 +53,9 @@ left.addEventListener('mouseover', function() {
     topFace.classList.add("stopPulseTop");
 
     hexagon.remove();
-})
+}
 
-left.addEventListener('mouseout', function() {
-    
+let leftMouseout = function() {
     right.classList.add("pulseRight");
     left.classList.add("left");
     left.classList.add("pulseLeft");
@@ -66,10 +67,9 @@ left.addEventListener('mouseout', function() {
     left.classList.remove("hoverLeft");
 
     container.prepend(hexagon);
-})
+}
 
-topFace.addEventListener('mouseover', function() {
-    
+let topMouseover = function() {
     right.classList.remove("pulseRight");
     left.classList.remove("pulseLeft");
     topFace.classList.remove("top");
@@ -80,10 +80,9 @@ topFace.addEventListener('mouseover', function() {
     topFace.classList.add("hoverTop");
 
     hexagon.remove();
-})
+}
 
-topFace.addEventListener('mouseout', function() {
-    
+let topMouseout = function() {
     right.classList.add("pulseRight");
     left.classList.add("pulseLeft");
     topFace.classList.add("top");
@@ -94,4 +93,35 @@ topFace.addEventListener('mouseout', function() {
     topFace.classList.remove("hoverTop");
 
     container.prepend(hexagon);
-})
+}
+
+// start click functions
+
+let aboutClick = function() {
+    
+    left.classList.add("left");
+
+    right.classList.remove("stopPulseRight");
+    topFace.classList.remove("stopPulseTop");
+    left.classList.remove("hoverLeft");
+}
+
+
+// add hover event listeners 
+
+right.addEventListener('mouseover', rightMouseover);
+
+right.addEventListener('mouseout', rightMouseout);
+
+left.addEventListener('mouseover', leftMouseover);
+
+left.addEventListener('mouseout', leftMouseout);
+
+topFace.addEventListener('mouseover', topMouseover);
+
+topFace.addEventListener('mouseout', topMouseout);
+
+
+// add click event listeners
+
+left.addEventListener('click', aboutClick);
