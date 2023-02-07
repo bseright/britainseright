@@ -95,9 +95,32 @@ let topMouseout = function() {
     container.prepend(hexagon);
 }
 
+let addAllHover = function() {
+    right.addEventListener('mouseover', rightMouseover);
+    right.addEventListener('mouseout', rightMouseout);
+
+    left.addEventListener('mouseover', leftMouseover);
+    left.addEventListener('mouseout', leftMouseout);
+
+    topFace.addEventListener('mouseover', topMouseover);
+    topFace.addEventListener('mouseout', topMouseout);
+}
+
+let removeAllHover = function() {
+    right.removeEventListener('mouseover', rightMouseover);
+    right.removeEventListener('mouseout', rightMouseout);
+
+    left.removeEventListener('mouseover', leftMouseover);
+    left.removeEventListener('mouseout', leftMouseout);
+
+    topFace.removeEventListener('mouseover', topMouseover);
+    topFace.removeEventListener('mouseout', topMouseout);
+}
+
 // start click functions
 
 let aboutClick = function() {
+    removeAllHover();
     
     left.classList.add("left");
 
@@ -109,17 +132,7 @@ let aboutClick = function() {
 
 // add hover event listeners 
 
-right.addEventListener('mouseover', rightMouseover);
-
-right.addEventListener('mouseout', rightMouseout);
-
-left.addEventListener('mouseover', leftMouseover);
-
-left.addEventListener('mouseout', leftMouseout);
-
-topFace.addEventListener('mouseover', topMouseover);
-
-topFace.addEventListener('mouseout', topMouseout);
+addAllHover();
 
 
 // add click event listeners
