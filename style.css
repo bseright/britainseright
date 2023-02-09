@@ -225,6 +225,7 @@ h3 {
     min-height: 420px;
     max-width: 420px;
     max-height: 420px;
+    position: relative;
 }
 
 .left,
@@ -285,9 +286,6 @@ h3 {
 
     top: 80px;
     left: 94px;
-
-    display: flex;
-    align-items: space-between;
 }
 
 .pulseLeft {
