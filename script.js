@@ -8,6 +8,9 @@ let right = document.querySelector(".right");
 let left = document.querySelector(".left");
 let topFace = document.querySelector(".top");
 
+let aboutTitle = document.querySelector(".aboutTitle");
+let aboutPara = document.querySelector(".aboutPara");
+
 let pulseRight = document.querySelector(".pulseRight");
 let pulseLeft = document.querySelector(".pulseLeft");
 let pulseTop = document.querySelector(".pulseTop");
@@ -121,6 +124,7 @@ let removeAllHover = function() {
 
 let aboutClick = function() {
     removeAllHover();
+    toggleAboutTitle();
     
     left.classList.add("left");
 
@@ -137,6 +141,16 @@ let portfolioClick = function() {
     right.classList.remove("stopPulseRight");
     left.classList.remove("stopPulseLeft");
     topFace.classList.remove("hoverTop");
+}
+
+let toggleAboutTitle = function() {
+    if (aboutTitle.style.display === "none") {
+        aboutTitle.style.display = "block";
+        aboutPara.style.display = "none";
+    } else {
+        aboutTitle.style.display = "none";
+        aboutPara.style.display = "block";
+    }
 }
 
 

@@ -23,6 +23,13 @@ h3 {
     margin: 0px;
 }
 
+.aboutPara {
+    display: none;
+    transform: rotate(-90deg);
+    color: white;
+    max-width: 360px;
+}
+
 /* BREATHING ANIMATIONS */
 
 @keyframes pulseRight {
@@ -214,13 +221,10 @@ h3 {
 
 .face {
     transform-origin: 0 0;
-    min-width: 380px;
-    min-height: 380px;
-    max-width: 380px;
-    max-height: 380px;
-    position: relative;
-    padding: 20px;
-    overflow: hidden;
+    min-width: 420px;
+    min-height: 420px;
+    max-width: 420px;
+    max-height: 420px;
 }
 
 .left,
@@ -239,6 +243,10 @@ h3 {
 
     left: 516px;
     top: 80px;
+}
+
+.rightInner {
+    margin: 20px 0 0 20px;
 }
 
 .pulseRight {
@@ -265,7 +273,7 @@ h3 {
     left: 516px;
     top: 80px;
 
-    animation: 1s 1 ease hoverRight forwards;
+    animation: .5s 1 ease hoverRight forwards;
 }
 
 .left {
@@ -302,7 +310,7 @@ h3 {
     top: 80px;
     left: 94px;
 
-    animation: 1s 1 ease hoverLeft forwards;
+    animation: .5s 1 ease hoverLeft forwards;
     cursor: pointer;
 }   
 
@@ -337,7 +345,7 @@ h3 {
     right: 325.5px;
     top: 78px;
 
-    animation: 1s 1 ease hoverTop forwards;
+    animation: .5s 1 ease hoverTop forwards;
     cursor: pointer;
 }   
 
