@@ -214,10 +214,9 @@ h3 {
 
 .face {
     transform-origin: 0 0;
-    min-width: 380px;
-    min-height: 380px;
+    min-width: 420px;
+    min-height: 420px;
     position: relative;
-    padding: 20px;
 }
 
 .left,
@@ -236,6 +235,10 @@ h3 {
 
     left: 516px;
     top: 80px;
+}
+
+.rightInner {
+    margin: 20px 0 0 20px;
 }
 
 .pulseRight {
