@@ -262,7 +262,7 @@ h3 {
     left: 516px;
     top: 80px;
 
-    animation: 1s 1 ease hoverRight forwards;
+    animation: .5s 1 ease hoverRight forwards;
 }
 
 .left {
@@ -296,7 +296,7 @@ h3 {
     top: 80px;
     left: 94px;
 
-    animation: 1s 1 ease hoverLeft forwards;
+    animation: .5s 1 ease hoverLeft forwards;
     cursor: pointer;
 }   
 
@@ -331,7 +331,7 @@ h3 {
     right: 325.5px;
     top: 78px;
 
-    animation: 1s 1 ease hoverTop forwards;
+    animation: .5s 1 ease hoverTop forwards;
     cursor: pointer;
 }   
 
