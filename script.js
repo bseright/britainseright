@@ -11,6 +11,8 @@ let topFace = document.querySelector(".top");
 let aboutTitle = document.querySelector(".aboutTitle");
 let aboutPara = document.querySelector(".aboutPara");
 
+let portfolioTitle = document.querySelector(".portfolioTitle");
+
 let pulseRight = document.querySelector(".pulseRight");
 let pulseLeft = document.querySelector(".pulseLeft");
 let pulseTop = document.querySelector(".pulseTop");
@@ -124,7 +126,8 @@ let removeAllHover = function() {
 
 let aboutClick = function() {
     removeAllHover();
-    toggleAboutTitle();
+    aboutToPara();
+    hidePortfolioTitle();
     
     left.classList.add("left");
 
@@ -143,14 +146,22 @@ let portfolioClick = function() {
     topFace.classList.remove("hoverTop");
 }
 
-let toggleAboutTitle = function() {
-    if (aboutTitle.style.display === "none") {
-        aboutTitle.style.display = "block";
-        aboutPara.style.display = "none";
-    } else {
+let aboutToPara = function() {
+    aboutTitle.style.opacity = "0";
+    aboutPara.style.display = "block";
+    
+    setTimeout(() => {
         aboutTitle.style.display = "none";
-        aboutPara.style.display = "block";
-    }
+        aboutPara.style.opacity = "100";
+    }, "200")
+}
+
+let hidePortfolioTitle = function() {
+    portfolioTitle.style.opacity = "0";
+
+    setTimeout(() => {
+        portfolioTitle.style.display = "none";
+    }, "200")
 }
 
 
